@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cardnumber:</b>
+  <%= @payment_info.cardnumber %>
+</p>
+
+<p>
+  <b>Csv:</b>
+  <%= @payment_info.csv %>
+</p>
+
+<p>
+  <b>Exp:</b>
+  <%= @payment_info.exp %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @payment_info.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @payment_info.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @payment_info.state %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @payment_info.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_payment_info_path(@payment_info) %> |
+<%= link_to 'Back', payment_infos_path %>

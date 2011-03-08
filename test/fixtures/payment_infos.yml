@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cardnumber: MyString
+  csv: MyString
+  exp: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  user_id: 1
+
+two:
+  cardnumber: MyString
+  csv: MyString
+  exp: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  user_id: 1

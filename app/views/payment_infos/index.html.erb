@@ -1,0 +1,35 @@
+<h1>Listing payment_infos</h1>
+
+<table>
+  <tr>
+    <th>Cardnumber</th>
+    <th>Csv</th>
+    <th>Exp</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @payment_infos.each do |payment_info| %>
+  <tr>
+    <td><%= payment_info.cardnumber %></td>
+    <td><%= payment_info.csv %></td>
+    <td><%= payment_info.exp %></td>
+    <td><%= payment_info.address %></td>
+    <td><%= payment_info.city %></td>
+    <td><%= payment_info.state %></td>
+    <td><%= payment_info.user_id %></td>
+    <td><%= link_to 'Show', payment_info %></td>
+    <td><%= link_to 'Edit', edit_payment_info_path(payment_info) %></td>
+    <td><%= link_to 'Destroy', payment_info, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Payment info', new_payment_info_path %>
