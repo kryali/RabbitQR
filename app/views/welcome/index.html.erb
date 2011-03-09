@@ -2,16 +2,8 @@
 <head runat="server">
     <title>RabbitQR | simple mobile payments</title>
     <link rel="icon" href="/static/img/rabbitqr.ico" type="image/x-icon"/>
-    
-    <script type="text/javascript" src="jquery.js"></script>
-    
-    <!--- MixPanel JS API Improts -->
-    <script type='text/javascript'> var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E')); </script> <script type='text/javascript'> try {  var mpmetrics = new MixpanelLib('86d858bea89fcaa0f486366bbf4925ba'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; } </script>
-    <!--- End MixPanel JS API Improts -->
-    
-    <!--- RabbitQR JS/CSS Imports -->
-    <link href="index.css" rel="Stylesheet" type="text/css" />
-    <!--- End RabbitQR JS/CSS Imports -->
+    <link href="/stylesheets/index.css" rel="Stylesheet" type="text/css" />
+    <script type='text/javascript'> var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E')); </script> <script type='text/javascript'> try {  var mpmetrics = new MixpanelLib('909e0d82cb55324a590479178d4e3ffd'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; } </script>
 </head>
 
 <body>
@@ -20,27 +12,24 @@
     </div>
     
     <div id="body">
-        <div id="rx-image-div">
-            <img src="droid.jpg" width="100%"/>
-        </div>
-        
+        <div id="rx-image-div"></div>
         <div id="one" class="step">
             1. Recipient displays their QR code
         </div>
-        
         <div id="two" class="step">
             2. Payer uses RabbitQR app to capture QR code
         </div>
-        
         <div id="three" class="step">
             3. Payer enters amount to pay, and presses "Pay".
         </div>
-        
     </div>
     
     <div id="footer">
         A <a href="http://startupbus.com">StartupBus 2011</a> creation.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://blog.rabbitqr.com">Blog</a>
     </div>
+    <script type="text/javascript">mpmetrics.track("Landing page loaded");</script>
 </body>
 
 </html>
