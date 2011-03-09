@@ -4,7 +4,9 @@ QRPay::Application.routes.draw do
 
   resources :payment_infos
 
-  match 'login' => 'user#login'
+  match 'login_form' => 'user#login_form'
+  match 'login' => 'user#login', :via => [:post]
+  match 'signup' => 'user#signup'
   resources :users, :only => [:show, :create]
   root :to => 'welcome#index'
 
