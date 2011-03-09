@@ -40,6 +40,7 @@ class PaymentInfosController < ApplicationController
   # POST /payment_infos
   # POST /payment_infos.xml
   def create
+    params[:payment_info].merge!({:user_id => session[:user_id]})
     @payment_info = PaymentInfo.new(params[:payment_info])
 
     respond_to do |format|

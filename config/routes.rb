@@ -1,5 +1,11 @@
 QRPay::Application.routes.draw do
 
+  match '/payments/payment', :to => 'payments#payment', :as => 'paymentspayment', :via => [:get]
+
+  match '/payments/relay_response', :to => 'payments#relay_response', :as => 'payments_relay_response', :via => [:post]
+
+  match '/payments/receipt', :to => 'payments#receipt', :as => 'payments_receipt', :via => [:get]
+
   resources :transactions
 
   resources :payment_infos
@@ -7,8 +13,10 @@ QRPay::Application.routes.draw do
   match 'login_form' => 'user#login_form'
   match 'login' => 'user#login', :via => [:post]
   match 'signup' => 'user#signup'
-  resources :users, :only => [:show, :create]
+  resources :user, :only => [:show, :create]
   root :to => 'welcome#index'
+
+  match 'logout' => 'user#logout'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
