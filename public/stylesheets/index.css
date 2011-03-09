@@ -1,0 +1,100 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 800px;
+}
+
+a:link    {color: #333; text-decoration: none;}
+a:active  {color: #333; text-decoration: none;}
+a:visited {color: #333; text-decoration: none;}
+a:hover   {color: #000; text-decoration: none;}
+
+div#header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 90px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#58D), to(#36B));
+	background: -moz-linear-gradient(top, #58D, #36B);
+    border-bottom: 1px solid #336;
+    color: #FFF;
+    font: 60px Arial;
+    padding-left: 20%;
+    padding-top: 10px;
+    text-shadow: 0.02em 0.02em 0.02em #AAA;
+}
+
+div#body {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 101px;
+    bottom: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#DDD));
+	background: -moz-linear-gradient(top,  rgba(255, 255, 255, 1),  rgba(255, 255, 255, 1));
+}
+
+div#one {
+    top: 50px;
+}
+
+div#two {
+    top: 180px;
+}
+
+div#three {
+    top: 310px;
+}
+
+div.step {
+    position: absolute;
+    top: 50px;
+    right: 15%;
+    width: 450px;
+    height: 55px;
+    padding: 10px;
+    padding-top: 35px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#58D), to(#36B));
+	background: -moz-linear-gradient(top, #58D, #36B);
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#777')";
+    color: #FFF;
+    text-align: left;
+    font: 20px Arial;
+    text-shadow: 0.05em 0.04em 0.05em #AAA;
+}
+
+div#rx-image-div {
+    position: fixed;
+    left: 15%;
+    right: 60px;
+    top: 150px;
+    height: 480px;
+    width: 298px;
+}
+
+div#rx-image-div img {
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#777')";
+}
+
+div#footer {
+    position: fixed;
+    top: 670px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font: 12px Arial;
+    color: #777;
+}
+
