@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110308231510) do
+ActiveRecord::Schema.define(:version => 20110308233826) do
 
   create_table "payment_infos", :force => true do |t|
     t.string   "cardnumber"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(:version => 20110308231510) do
     t.string   "city"
     t.string   "state"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transactions", :force => true do |t|
+    t.integer  "payer_id"
+    t.integer  "receiver_id"
+    t.float    "amount"
+    t.string   "state"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

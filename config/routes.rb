@@ -1,8 +1,11 @@
 QRPay::Application.routes.draw do
 
+  resources :transactions
+
   resources :payment_infos
 
-  match 'test' => 'welcome#index'
+  match 'login' => 'user#login'
+  match 'user/:id' => 'user#show'
   root :to => 'welcome#index'
 
   # The priority is based upon order of creation:
