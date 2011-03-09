@@ -75,15 +75,15 @@ div#rx-image-div {
     left: 15%;
     right: 60px;
     top: 150px;
-    height: 480px;
-    width: 298px;
+    height: 390px;
+    width: 295px;
     border-radius: 15px;
     -moz-border-radius: 15px;
     -moz-box-shadow: 3px 3px 3px #777;
 	-webkit-box-shadow: 3px 3px 3px #777;
 	box-shadow: 3px 3px 3px #777;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#777')";
-    background-image: url('/static/img/droid.jpg');
+    background-image: url('/images/droid.jpg');
 }
 
 div#footer {
