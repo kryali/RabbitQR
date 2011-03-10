@@ -6,6 +6,10 @@
 	font-family: Myriad Pro, Arial, sans-serif;
 }
 
+body {
+  background: url('/images/pattern.png');
+}
+
 #logo {
 	display: block;
 	width: 258px;
@@ -21,10 +25,11 @@
 
 #recent{
 	padding: 20px;
-	border: 1px solid #ccc;
+	border: 1px solid #cccccc;
 	overflow: hidden;
 	margin: 0 auto;
 	min-width: 300px;
+  background: #ffffff;
 }
 
 #header li a{
@@ -32,16 +37,18 @@
 	color: #333;
 	padding: 7px;
 	border: 1px solid #ccc;
-	-moz-box-radius: 5px;
+  background: #ffffff;
+	-moz-border-radius: 5px;
 }
 
 #header li a:hover{
-	border-top: 5px solid #ccc;
+	border-top: 5px solid #cccccc;
 }
 
 #header{
 	height: 80px;
 	border-bottom: 10px solid #d1e2ea;
+  background: #ffffff;
 }
 
 #nav ul {
@@ -56,7 +63,7 @@
 
 table {
 	width: 200px;
-	border: 1px solid #ccc;
+	border: 1px solid #cccccc;
 	margin: 10px;
 }
 
@@ -65,12 +72,12 @@ caption{
 }
 
 th {
-	background:#ccc;
+	background:#cccccc;
 	padding: 10px;
 }
 td {
 	padding: 3px;
-	border: 1px solid #ccc;
+	border: 1px solid #cccccc;
 }
 .right{
 	float: right;

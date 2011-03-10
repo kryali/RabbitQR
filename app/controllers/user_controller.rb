@@ -6,10 +6,14 @@ def login
 #  @user = User.where({:username => params[:user][:username], :password => params[:user][:password]})
   @user = User.find(:first, :conditions => {:username => params[:user][:username], :password => params[:user][:password]})
   session[:user_id] = @user.id
+  @received = Transaction.find_all_by_receiver_id(session[:user_id])
+  @sent = Transaction.find_all_by_payer_id(session[:user_id])
   respond_to do |format|
     if @user
         session[:user_id] = @user.id
-        format.html { render :action => 'show' }
+#        format.html { render :action => 'show' }
+        redirect_to user_path(@user.id)
+        return
         format.json { render :json => @user }
     else
         render :json => @user
@@ -30,16 +34,20 @@ def login_form
 end
 
 def show
-  logger.debug "===\nOMFG FOR\n==="
+#  logger.debug "===\nOMFG FOR\n==="
   unless isLoggedIn
     redirect_to :root
   end
   @user = User.find(session[:user_id])
+  @received = Transaction.find_all_by_receiver_id(session[:user_id])
+  @sent = Transaction.find_all_by_payer_id(session[:user_id])
+  logger.debug "Received: #{@received}"
+  logger.debug "Received: #{@sent}"
 end
 
 # Create the user
 def create
-  logger.debug "===\nCreate User\n==="
+#  logger.debug "===\nCreate User\n==="
   params[:user].delete(:phone)
   @user = User.new(params[:user])
     respond_to do |format|

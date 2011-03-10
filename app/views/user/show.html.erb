@@ -4,45 +4,43 @@
 	<a href="/" id="logo"></a>
 	<div id="nav">
 		<ul>
-			<li><a href="/users/1">Dashboard</a></li>
+			<li><%= link_to "Dashboard", user_path(@user.id) %> </li>
 			<li><%= link_to "New Card", new_payment_info_path %></li>
-			<li><a href="/payemnt_infos/">Profile</a></li>
-			<li><a href="/history">History</a></li>
+      <% if @user.payment_infos %>
+        <li><%= link_to "Profile", edit_payment_info_path(@user.payment_infos[0].id) %></li>
+      <% end %>
 			<li><%= link_to "Logout", logout_path %></li>
 		</ul>
 	</div>
 </div>
 <div id="content">
 	
-	Hey <%= @user.username %>, Welcome to RabbitQR! Here are your user options.
+	Hey <%= @user.username %>, welcome to RabbitQR.
 	<br />
 	  <br />
 	<br /><br />
 	<div id="recent">
-		<h2>Recent Payments</h2>
+		<h2>Payments</h2>
 		<table class="left">
 			<caption>Sent<caption>
 			<tr><th>Name</th><th>Amount</th></tr>
-			<tr>
-				<td>Kiran</td>
-				<td>10.1</td>
-			</tr>
-			<tr>
-				<td>Kiran</td>
-				<td>10.1</td>
-			</tr>
+      <% @sent.each do |transaction| %>
+        <tr>
+          <% u = User.find(transaction.receiver_id) %>
+          <td><%= u.username %></td>
+          <td><%= transaction.amount %></td>
+        </tr>
+      <% end %>
 		</table>
 		<table class="left">
 			<caption>Received<caption>
 			<tr><th>Name</th><th>Amount</th></tr>
-			<tr>
-				<td>Kiran</td>
-				<td>10.1</td>
-			</tr>
-			<tr>
-				<td>Kiran</td>
-				<td>10.1</td>
-			</tr>
+      <% @received.each do |transaction| %>
+        <tr>
+          <td><%= transaction.receiver_id %></td>
+          <td><%= transaction.amount %></td>
+        </tr>
+      <% end %>
 		</table>
 	</div>
 	
