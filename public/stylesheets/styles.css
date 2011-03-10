@@ -1,0 +1,80 @@
+* {
+  	margin:0px;
+  	padding:0px;
+	text-decoration: none;
+	list-style-type: none;
+	font-family: Myriad Pro, Arial, sans-serif;
+}
+
+#logo {
+	display: block;
+	width: 258px;
+	height: 56px;
+	background: url('/images/rabbitqr.png');
+	float: left;
+	margin: 10px;
+}
+
+#content{
+	padding: 20px;
+}
+
+#recent{
+	padding: 20px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	margin: 0 auto;
+	min-width: 300px;
+}
+
+#header li a{
+	display: block;
+	color: #333;
+	padding: 7px;
+	border: 1px solid #ccc;
+	-moz-box-radius: 5px;
+}
+
+#header li a:hover{
+	border-top: 5px solid #ccc;
+}
+
+#header{
+	height: 80px;
+	border-bottom: 10px solid #d1e2ea;
+}
+
+#nav ul {
+	float: right;
+	margin-top: 20px;
+}
+
+#nav li {
+	float: left;
+	margin: 0px 20px;
+}
+
+table {
+	width: 200px;
+	border: 1px solid #ccc;
+	margin: 10px;
+}
+
+caption{
+	text-align: left;
+}
+
+th {
+	background:#ccc;
+	padding: 10px;
+}
+td {
+	padding: 3px;
+	border: 1px solid #ccc;
+}
+.right{
+	float: right;
+}
+.left {
+	float: left;
+}

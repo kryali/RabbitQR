@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  payer_id: 1
+  receiver_id: 1
+  amount: 1.5
+  state: MyString
+
+two:
+  payer_id: 1
+  receiver_id: 1
+  amount: 1.5
+  state: MyString
