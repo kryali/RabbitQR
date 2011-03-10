@@ -1,16 +1,21 @@
 <html>
 <head runat="server">
-    <title>RabbitQR | simple mobile payments</title>
+    <title>RabbitQR | Simple mobile payments</title>
     <link rel="icon" href="/static/img/rabbitqr.ico" type="image/x-icon"/>
-    <link href="/stylesheets/index.css" rel="Stylesheet" type="text/css" />
-    <script type='text/javascript'> var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E')); </script> <script type='text/javascript'> try {  var mpmetrics = new MixpanelLib('909e0d82cb55324a590479178d4e3ffd'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; } </script>
 </head>
 
 <body>
-    <div id="header">
-        RabbitQR <span style="font-size: 24px">simple mobile payments</span>
-    </div>
-    
+	<div id="header">
+		<a href="/" id="logo"></a>
+		<div id="nav">
+			<ul>
+				<li><a href="tumblr.com">Blog</a></li>
+				<li><a href="/learn/">Learn More</a></li>
+				<li><a href="/team">Team</a></li>
+				<li><%= link_to "Login", login_form_path %></li>
+			</ul>
+		</div>
+	</div>
     <div id="body">
         <div id="rx-image-div"></div>
         <div id="one" class="step">
@@ -29,7 +34,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="http://blog.rabbitqr.com">Blog</a>
     </div>
-    <script type="text/javascript">mpmetrics.track("Landing page loaded");</script>
+    	
 </body>
 
 </html>

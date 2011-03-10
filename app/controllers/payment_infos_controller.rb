@@ -2,12 +2,15 @@ class PaymentInfosController < ApplicationController
   # GET /payment_infos
   # GET /payment_infos.xml
   def index
+    redirect_to :root
+=begin
     @payment_infos = PaymentInfo.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @payment_infos }
     end
+=end
   end
 
   # GET /payment_infos/1

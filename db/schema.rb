@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110308233826) do
+ActiveRecord::Schema.define(:version => 20110310060537) do
 
   create_table "payment_infos", :force => true do |t|
     t.string   "cardnumber"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20110308233826) do
     t.integer  "payment_info_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "phone"
   end
 
 end
