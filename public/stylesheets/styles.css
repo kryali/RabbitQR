@@ -10,6 +10,13 @@ body {
   background: url('/images/pattern.png');
 }
 
+form {
+  background: #ffffff;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
 #logo {
 	display: block;
 	width: 258px;
@@ -41,6 +48,7 @@ body {
 	-moz-border-radius: 5px;
 }
 
+p
 #header li a:hover{
 	border-top: 5px solid #cccccc;
 }

@@ -8,6 +8,26 @@
 </head>
 <body>
 
+<div id="header">
+	<a href="/" id="logo"></a>
+	<div id="nav">
+		<ul>
+      <% if @user %>
+        <li><%= link_to "Dashboard", user_path(@user.id) %> </li>
+        <li><%= link_to "New Card", new_payment_info_path %></li>
+        <% if @user.payment_infos %>
+          <li><%= link_to "Profile", edit_payment_info_path(@user.payment_infos[0].id) %></li>
+        <% end %>
+        <li><%= link_to "Logout", logout_path %></li>
+      <% else %>
+				<li><a href="tumblr.com">Blog</a></li>
+				<li><a href="/learn/">Download</a></li>
+				<li><a href="/team">Team</a></li>
+				<li><%= link_to "Login", login_form_path %></li>
+      <% end %>
+		</ul>
+	</div>
+</div>
 <%= yield %>
 
 </body>

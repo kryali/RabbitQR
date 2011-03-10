@@ -1,5 +1,10 @@
 class TransactionsController < ApplicationController
   skip_before_filter :authenticate, :only => [:phonePay]
+  before_filter :userLogSave
+
+  def userLogSave
+    @user = User.find(session[:user_id])
+  end
 
   def phonePay
     #logger.debug params
@@ -38,6 +43,7 @@ class TransactionsController < ApplicationController
   # GET /transactions/1
   # GET /transactions/1.xml
   def show
+    @user = User.find(session[:user_id])
     @transaction = Transaction.find(params[:id])
     if (@transaction.payer_id != session[:user_id] && @transaction.receiver_id != session[:user_id] )
       redirect_to :root
@@ -52,6 +58,7 @@ class TransactionsController < ApplicationController
   # GET /transactions/new
   # GET /transactions/new.xml
   def new
+    @user = User.find(session[:user_id])
     @transaction = Transaction.new
 
     respond_to do |format|
@@ -62,12 +69,14 @@ class TransactionsController < ApplicationController
 
   # GET /transactions/1/edit
   def edit
+    @user = User.find(session[:user_id])
     @transaction = Transaction.find(params[:id])
   end
 
   # POST /transactions
   # POST /transactions.xml
   def create
+    @user = User.find(session[:user_id])
     @transaction = Transaction.new(params[:transaction].merge({:payer_id => session[:user_id]}))
 
     respond_to do |format|

@@ -1,24 +1,5 @@
-
-
-<div id="header">
-	<a href="/" id="logo"></a>
-	<div id="nav">
-		<ul>
-			<li><%= link_to "Dashboard", user_path(@user.id) %> </li>
-			<li><%= link_to "New Card", new_payment_info_path %></li>
-      <% if @user.payment_infos %>
-        <li><%= link_to "Profile", edit_payment_info_path(@user.payment_infos[0].id) %></li>
-      <% end %>
-			<li><%= link_to "Logout", logout_path %></li>
-		</ul>
-	</div>
-</div>
 <div id="content">
 	
-	Hey <%= @user.username %>, welcome to RabbitQR.
-	<br />
-	  <br />
-	<br /><br />
 	<div id="recent">
 		<h2>Payments</h2>
 		<table class="left">
