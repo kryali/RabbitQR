@@ -10,7 +10,7 @@ class TransactionsController < ApplicationController
     amount = params[:amount].to_f
     t = Transaction.create({ :receiver_id => @receiver.id, :payer_id => @payer.id, :amount =>  amount})
     #logger.debug "Creating transaction between Reciever: #{@receiver.phone} Payer: #{@payer.phone}"
-    msg = "[RabbitQR] You have received a payment of $#{amount} from #{@payer.username}"
+    msg = "<RabbitQR> You have received a payment of $#{amount} from #{@payer.username}."
     send_text(@receiver.phone, msg)
     render :json =>  t
   end
