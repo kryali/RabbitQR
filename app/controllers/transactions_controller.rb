@@ -5,12 +5,11 @@ class TransactionsController < ApplicationController
     #logger.debug params
     @payer = User.find(:first, :conditions => {:phone => params[:payerPhone]})
     @receiver = User.find(:first, :conditions => {:phone => params[:receiverPhone]})
-
-    if @payer is nil
+    unless @payer
       @payer = User.create({:username => params[:payerPhone] , :password => '', :phone => params[:payerPhone]})
     end
-    if @receiver is nil
-      @receiver = User.create({:username => params[:receiverPhone], :password => '', :phone => params[:payerPhone]})
+    unless @receiver
+      @receiver = User.create({:username => params[:receiverPhone], :password => '', :phone => params[:receiverPhone]})
     end
     #logger.debug "PAYER NULL" unless @payer
     #logger.debug "RECEIVER NULL" unless @receiver
