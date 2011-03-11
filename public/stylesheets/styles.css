@@ -6,6 +6,11 @@
 	font-family: Myriad Pro, Arial, sans-serif;
 }
 
+iframe {
+  margin-top: 2em;
+  margin-left: 7.2em;
+}
+
 .step{
   display: block;
   float: left;
@@ -51,6 +56,7 @@ body {
 #mobile {
   background: #ffffff;
   margin: 0 auto;
+  margin-bottom: -1em;
   padding: 1em;
   overflow: hidden;
   border-radius: 5px;
