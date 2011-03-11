@@ -14,7 +14,9 @@ QRPay::Application.routes.draw do
   match 'login' => 'user#login', :via => [:post]
   match 'signup_p' => 'user#create', :via => [:post]
   match 'signup' => 'user#signup'
+  match 'download' => 'welcome#download'
   match 'pay' => 'transactions#phonePay', :via => [:post]
+  match 'team' => 'welcome#team'
   resources :user, :only => [:show, :create]
   root :to => 'welcome#index'
 

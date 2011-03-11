@@ -6,8 +6,63 @@
 	font-family: Myriad Pro, Arial, sans-serif;
 }
 
+.step{
+  display: block;
+  float: left;
+  margin: 0 30px;
+  height: 426px;
+  width: 225px;
+}
+
+img{
+  float: left;
+}
+
+#one{
+  padding: 30px;
+  width: 238px;
+}
+
 body {
   background: url('/images/pattern.png');
+  color: #333333;
+}
+
+#body {
+  overflow: hidden;
+  width: 900px;
+  margin: 0 auto;
+}
+
+#body h1{
+  color: #444444;
+  text-shadow: 1px 1px 2px #cccccc;
+  border-bottom: 1px dashed #cccccc;
+}
+
+#web {
+  background: #ffffff;
+  margin: 50px auto;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+#mobile {
+  background: #ffffff;
+  margin: 0 auto;
+  padding: 1em;
+  overflow: hidden;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+#footer{
+  padding: 10px;
+  background: #ffffff;
+  text-align: center;
+	border-top: 10px solid #d1e2ea;
+  margin-top: 3em;
 }
 
 form {
@@ -30,6 +85,9 @@ form {
 	padding: 20px;
 }
 
+#header{
+  margin-bottom: 1.5em;
+}
 #recent{
 	padding: 20px;
 	border: 1px solid #cccccc;
@@ -45,10 +103,8 @@ form {
 	padding: 7px;
 	border: 1px solid #ccc;
   background: #ffffff;
-	-moz-border-radius: 5px;
 }
 
-p
 #header li a:hover{
 	border-top: 5px solid #cccccc;
 }

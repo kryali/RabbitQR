@@ -20,8 +20,8 @@
         <% end %>
         <li><%= link_to "Logout", logout_path %></li>
       <% else %>
-				<li><a href="tumblr.com">Blog</a></li>
-				<li><a href="/learn/">Download</a></li>
+				<li><a href="http://blog.rabbitqr.com">Blog</a></li>
+				<li><a href="/download/">Download</a></li>
 				<li><a href="/team">Team</a></li>
 				<li><%= link_to "Login", login_form_path %></li>
       <% end %>
@@ -29,6 +29,11 @@
 	</div>
 </div>
 <%= yield %>
+  <div id="footer">
+      A <a href="http://startupbus.com">StartupBus 2011</a> creation.
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="http://blog.rabbitqr.com">Blog</a>
+  </div>
 
 </body>
 </html>
