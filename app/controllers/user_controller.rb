@@ -4,7 +4,8 @@ skip_before_filter :authenticate, :only => [:login, :login_form, :signup]
 
 def login
 #  @user = User.where({:username => params[:user][:username], :password => params[:user][:password]})
-  @user = User.find(:first, :conditions => {:username => params[:user][:username], :password => params[:user][:password]})
+  #@user = User.find(:first, :conditions => {:username => params[:user][:username], :password => params[:user][:password]})
+  @user = User.find(:first, :conditions => {:username => params[:user][:username]})
   session[:user_id] = @user.id
   @received = Transaction.find_all_by_receiver_id(session[:user_id])
   @sent = Transaction.find_all_by_payer_id(session[:user_id])
