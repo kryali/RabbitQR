@@ -1,10 +1,5 @@
 class TransactionsController < ApplicationController
   skip_before_filter :authenticate, :only => [:phonePay]
-  before_filter :userLogSave
-
-  def userLogSave
-    @user = User.find(session[:user_id])
-  end
 
   def phonePay
     #logger.debug params
