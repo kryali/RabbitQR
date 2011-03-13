@@ -5,6 +5,7 @@ QRPay::Application.routes.draw do
   match '/payments/relay_response', :to => 'payments#relay_response', :as => 'payments_relay_response', :via => [:post]
 
   match '/payments/receipt', :to => 'payments#receipt', :as => 'payments_receipt', :via => [:get]
+  match 'qr/:num', :to => 'user#qr'
 
   resources :transactions
 

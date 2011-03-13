@@ -1,6 +1,10 @@
 class UserController < ApplicationController
 
-skip_before_filter :authenticate, :only => [:login, :login_form, :signup]
+skip_before_filter :authenticate, :only => [:login, :login_form, :signup, :qr]
+
+def qr
+  redirect_to 'http://chart.apis.google.com/chart?cht=qr&chs=400x400&chl=' + params[:num]
+end
 
 def login
 #  @user = User.where({:username => params[:user][:username], :password => params[:user][:password]})
